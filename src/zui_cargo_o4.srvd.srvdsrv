@@ -1,0 +1,11 @@
+@EndUserText: {
+  label: 'Service Definition for ZC_CARGO'
+}
+@ObjectModel: {
+  leadingEntity: {
+    name: 'ZC_CARGO'
+  }
+}
+define service ZUI_CARGO_O4 provider contracts odata_v4_ui {
+  expose ZC_CARGO as Cargo;
+}

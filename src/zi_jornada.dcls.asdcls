@@ -1,0 +1,6 @@
+@EndUserText.label: 'ZI_JORNADA'
+@MappingRole: true
+define role ZI_JORNADA {
+  grant select on ZI_JORNADA
+  where TRUE;
+}

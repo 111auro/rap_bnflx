@@ -1,0 +1,6 @@
+@EndUserText.label: 'ZI_SOLICITUD'
+@MappingRole: true
+define role ZI_SOLICITUD {
+  grant select on ZI_SOLICITUD
+    where LocalCreatedBy = $session.user;
+}

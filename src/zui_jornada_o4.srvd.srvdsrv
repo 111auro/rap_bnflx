@@ -1,0 +1,11 @@
+@EndUserText: {
+  label: 'Service Definition for ZC_JORNADA'
+}
+@ObjectModel: {
+  leadingEntity: {
+    name: 'ZC_JORNADA'
+  }
+}
+define service ZUI_JORNADA_O4 provider contracts odata_v4_ui {
+  expose ZC_JORNADA as Jornada;
+}

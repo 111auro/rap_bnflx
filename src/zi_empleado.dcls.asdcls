@@ -1,0 +1,6 @@
+@EndUserText.label: 'Access Control for ZI_EMPLEADO'
+@MappingRole: true
+define role ZI_EMPLEADO {
+    grant select on ZI_EMPLEADO
+      where TRUE;          
+}

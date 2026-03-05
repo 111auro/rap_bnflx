@@ -1,0 +1,6 @@
+@EndUserText.label: 'ZC_FRENTE'
+@MappingRole: true
+define role ZC_FRENTE {
+  grant select on ZC_FRENTE
+  where INHERITING CONDITIONS FROM ENTITY ZI_FRENTE REPLACING { ROOT WITH _BaseEntity };
+}

@@ -1,0 +1,328 @@
+@Metadata.layer: #CORE
+@UI.headerInfo.title.type: #STANDARD
+@UI.headerInfo.title.value: 'Idempleado'
+@UI.headerInfo.typeName: 'Empleado'
+@UI.headerInfo.typeNamePlural: 'Empleados'
+@UI.headerInfo.description.type: #STANDARD
+@UI.headerInfo.description.value: 'Idempleado'
+annotate view ZC_EMPLEADO with
+{
+  @UI.hidden: true 
+  @EndUserText.label: 'EmpleadoUUID'
+  @UI.identification: [ {
+    position: 10 , 
+    label: 'EmpleadoUUID'
+  } ]
+  @UI.lineItem: [ {
+    position: 10 , 
+    label: 'EmpleadoUUID'
+  } ]
+  @UI.selectionField: [ {
+    position: 10 
+  } ]
+  EmpleadoUUID;
+  
+  @EndUserText.label: 'Id empleado'
+  @UI.facet: [ {
+    label: 'General Information', 
+    id: 'GeneralInfo', 
+    purpose: #STANDARD, 
+    position: 20 , 
+    type: #IDENTIFICATION_REFERENCE
+  } ]
+  @UI.identification: [ {
+    position: 20 , 
+    label: 'Id empleado'
+  } ]
+  @UI.lineItem: [ {
+    position: 20 , 
+    label: 'Id empleado'
+  } ]
+  @UI.selectionField: [ {
+    position: 20 
+  } ]
+  Idempleado;
+  
+  @EndUserText.label: 'Usuario'
+  @UI.identification: [ {
+    position: 30 , 
+    label: 'Usuario'
+  } ]
+  @UI.lineItem: [ {
+    position: 30 , 
+    label: 'Usuario'
+  } ]
+  @UI.selectionField: [ {
+    position: 30 
+  } ]
+  Usuario;
+  
+  
+  @EndUserText.label: 'Nombre'
+  @UI.identification: [ {
+    position: 40 , 
+    label: 'Nombre'
+  } ]
+  @UI.lineItem: [ {
+    position: 40 , 
+    label: 'Nombre'
+  } ]
+  @UI.selectionField: [ {
+    position: 40 
+  } ]
+  Nombre;
+  
+  @EndUserText.label: 'Cargo'
+  @Consumption.filter.hidden: true
+  @UI.identification: [ {
+    position: 50 , 
+    label: 'Cargo'
+  } ]
+  @UI.lineItem: [ {
+    position: 50 , 
+    label: 'Cargo'
+  } ]
+  @UI.selectionField: [ {
+    position: 50 
+  } ]
+  Cargo;
+  
+  @EndUserText.label: 'Frente'
+  @UI.identification: [ {
+    position: 60 , 
+    label: 'Frente'
+  } ]
+  @UI.lineItem: [ {
+    position: 60 , 
+    label: 'Frente'
+  } ]
+  @UI.selectionField: [ {
+    position: 60 
+  } ]
+  Frente;
+  
+  @Consumption.filter.hidden: true
+  @EndUserText.label: 'Email'
+  @UI.identification: [ {
+    position: 70 , 
+    label: 'Email'
+  } ]
+  @UI.lineItem: [ {
+    position: 70 , 
+    label: 'Email'
+  } ]
+  @UI.selectionField: [ {
+    position: 70 
+  } ]
+  Email;
+  
+  @Consumption.filter.hidden: true
+  @EndUserText.label: 'Vacaciones Dispo'
+  @UI.identification: [ {
+    position: 80 , 
+    label: 'Vacaciones Dispo'
+  } ]
+  @UI.lineItem: [ {
+    position: 80 , 
+    label: 'Vacaciones Dispo'
+  } ]
+  @UI.selectionField: [ {
+    position: 80 
+  } ]
+  VacacionesDispo;
+  
+  @Consumption.filter.hidden: true
+  @EndUserText.label: 'Día cumple Dispo'
+  @UI.identification: [ {
+    position: 90 , 
+    label: 'Día cumple Dispo'
+  } ]
+  @UI.lineItem: [ {
+    position: 90 , 
+    label: 'Día cumple Dispo'
+  } ]
+  @UI.selectionField: [ {
+    position: 90 
+  } ]
+  DiacumpleDispo;
+  
+  @Consumption.filter.hidden: true
+  @EndUserText.label: 'Día prepara Dispo'
+  @UI.identification: [ {
+    position: 100 , 
+    label: 'Día prepara Dispo'
+  } ]
+  @UI.lineItem: [ {
+    position: 100 , 
+    label: 'Día prepara Dispo'
+  } ]
+  @UI.selectionField: [ {
+    position: 100 
+  } ]
+  DiapreparaDispo;
+  
+  @Consumption.filter.hidden: true
+  @EndUserText.label: 'Día flex Dispo'
+  @UI.identification: [ {
+    position: 110 , 
+    label: 'Día flex Dispo'
+  } ]
+  @UI.lineItem: [ {
+    position: 110 , 
+    label: 'Día flex Dispo'
+  } ]
+  @UI.selectionField: [ {
+    position: 110 
+  } ]
+  DiaflexDispo;
+  
+  @Consumption.filter.hidden: true
+  @EndUserText.label: 'Medio diligencia Dispo'
+  @UI.identification: [ {
+    position: 120 , 
+    label: 'Medio diligencia Dispo'
+  } ]
+  @UI.lineItem: [ {
+    position: 120 , 
+    label: 'Medio diligencia Dispo'
+  } ]
+  @UI.selectionField: [ {
+    position: 120 
+  } ]
+  MediodiliDispo;
+  
+  @Consumption.filter.hidden: true
+  @EndUserText.label: 'Medio flex Dispo'
+  @UI.identification: [ {
+    position: 130 , 
+    label: 'Medio flex Dispo'
+  } ]
+  @UI.lineItem: [ {
+    position: 130 , 
+    label: 'Medio flex Dispo'
+  } ]
+  @UI.selectionField: [ {
+    position: 130 
+  } ]
+  MedioflexDispo;
+  
+  @Consumption.filter.hidden: true
+  @EndUserText.label: 'Medio free Dispo'
+  @UI.identification: [ {
+    position: 140 , 
+    label: 'Medio free Dispo'
+  } ]
+  @UI.lineItem: [ {
+    position: 140 , 
+    label: 'Medio free Dispo'
+  } ]
+  @UI.selectionField: [ {
+    position: 140 
+  } ]
+  MediofreeDispo;
+  
+  @Consumption.filter.hidden: true
+  @EndUserText.label: 'Día Familia'
+  @UI.identification: [ {
+    position: 150 , 
+    label: 'Día Familia'
+  } ]
+  @UI.lineItem: [ {
+    position: 150 , 
+    label: 'Día Familia'
+  } ]
+  @UI.selectionField: [ {
+    position: 150 
+  } ]
+  DiaFamilia;
+  
+  @Consumption.filter.hidden: true
+  @EndUserText.label: 'Aprobador'
+  @UI.identification: [ {
+    position: 160 , 
+    label: 'Aprobador'
+  } ]
+  @UI.lineItem: [ {
+    position: 160 , 
+    label: 'Aprobador'
+  } ]
+  @UI.selectionField: [ {
+    position: 160 
+  } ]
+  Aprobador;
+  
+  @Consumption.filter.hidden: true
+  @UI.identification: [ {
+    position: 170 
+  } ]
+  @UI.lineItem: [ {
+    position: 170 
+  } ]
+  @UI.selectionField: [ {
+    position: 170 
+  } ]
+  LocalCreatedBy;
+  
+  @Consumption.filter.hidden: true
+  @UI.identification: [ {
+    position: 180 
+  } ]
+  @UI.lineItem: [ {
+    position: 180 
+  } ]
+  @UI.selectionField: [ {
+    position: 180 
+  } ]
+  LocalCreatedAt;
+  
+  @UI.hidden: true
+  @UI.identification: [ {
+    position: 190 
+  } ]
+  @UI.lineItem: [ {
+    position: 190 
+  } ]
+  @UI.selectionField: [ {
+    position: 190 
+  } ]
+  LocalLastChangedBy;
+  
+  @UI.hidden: true
+  @UI.identification: [ {
+    position: 200 
+  } ]
+  @UI.lineItem: [ {
+    position: 200 
+  } ]
+  @UI.selectionField: [ {
+    position: 200 
+  } ]
+  LocalLastChangedAt;
+  
+  @UI.hidden: true
+  @UI.identification: [ {
+    position: 210 
+  } ]
+  @UI.lineItem: [ {
+    position: 210 
+  } ]
+  @UI.selectionField: [ {
+    position: 210 
+  } ]
+  LastChangedAt;
+  
+  @UI.hidden: true
+  @EndUserText.label: '_BaseEntity'
+  @UI.identification: [ {
+    position: 220 , 
+    label: '_BaseEntity'
+  } ]
+  @UI.lineItem: [ {
+    position: 220 , 
+    label: '_BaseEntity'
+  } ]
+  @UI.selectionField: [ {
+    position: 220 
+  } ]
+  _BaseEntity;
+}

@@ -1,0 +1,6 @@
+@EndUserText.label: 'ZI_FRENTE'
+@MappingRole: true
+define role ZI_FRENTE {
+  grant select on ZI_FRENTE
+  where TRUE;
+}

@@ -1,0 +1,6 @@
+@EndUserText.label: 'ZC_DIAS_DISPON'
+@MappingRole: true
+define role ZC_DIAS_DISPON {
+  grant select on ZC_DIAS_DISPON
+  where INHERITING CONDITIONS FROM ENTITY ZI_DIAS_DISPON REPLACING { ROOT WITH _BaseEntity };
+}

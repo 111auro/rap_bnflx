@@ -1,0 +1,11 @@
+@EndUserText: {
+  label: 'Service Definition for ZC_FRENTE'
+}
+@ObjectModel: {
+  leadingEntity: {
+    name: 'ZC_FRENTE'
+  }
+}
+define service ZUI_FRENTE_O4 provider contracts odata_v4_ui {
+  expose ZC_FRENTE as Frente;
+}

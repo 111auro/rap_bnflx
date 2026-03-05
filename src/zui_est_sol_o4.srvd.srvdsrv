@@ -1,0 +1,11 @@
+@EndUserText: {
+  label: 'Service Definition for ZC_EST_SOL'
+}
+@ObjectModel: {
+  leadingEntity: {
+    name: 'ZC_EST_SOL'
+  }
+}
+define service ZUI_EST_SOL_O4 provider contracts odata_v4_ui {
+  expose ZC_EST_SOL as Est_Solicitud;
+}

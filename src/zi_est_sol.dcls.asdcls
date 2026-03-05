@@ -1,0 +1,6 @@
+@EndUserText.label: 'ZI_EST_SOL'
+@MappingRole: true
+define role ZI_EST_SOL {
+  grant select on ZI_EST_SOL
+  where TRUE;
+}

@@ -1,0 +1,6 @@
+@EndUserText.label: 'ZC_JORNADA'
+@MappingRole: true
+define role ZC_JORNADA {
+  grant select on ZC_JORNADA
+  where INHERITING CONDITIONS FROM ENTITY ZI_JORNADA REPLACING { ROOT WITH _BaseEntity };
+}

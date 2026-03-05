@@ -1,0 +1,6 @@
+@EndUserText.label: 'ZI_DIAS_DISPON'
+@MappingRole: true
+define role ZI_DIAS_DISPON {
+  grant select on ZI_DIAS_DISPON
+  where TRUE;
+}

@@ -1,0 +1,6 @@
+@EndUserText.label: 'ZC_TIP_SOL'
+@MappingRole: true
+define role ZC_TIP_SOL {
+  grant select on ZC_TIP_SOL
+  where INHERITING CONDITIONS FROM ENTITY ZI_TIP_SOL REPLACING { ROOT WITH _BaseEntity };
+}

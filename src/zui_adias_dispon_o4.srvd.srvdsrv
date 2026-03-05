@@ -1,0 +1,11 @@
+@EndUserText: {
+  label: 'Service Definition for ZC_DIAS_DISPON'
+}
+@ObjectModel: {
+  leadingEntity: {
+    name: 'ZC_DIAS_DISPON'
+  }
+}
+define service ZUI_ADIAS_DISPON_O4 provider contracts odata_v4_ui {
+  expose ZC_DIAS_DISPON as dias_dispo;
+}

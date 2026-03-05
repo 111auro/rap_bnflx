@@ -1,0 +1,296 @@
+@Metadata.layer: #CORE
+//////@UI.headerInfo.title.type: #STANDARD
+//////@UI.headerInfo.title.value: 'SolicitudUUID'
+//////@UI.headerInfo.description.type: #STANDARD
+//////@UI.headerInfo.description.value: 'SolicitudUUID'
+@UI.headerInfo: {
+    typeName: 'Solicitud',
+    typeNamePlural: 'Solicitudes',
+    title: { type: #STANDARD, value: 'Idempleado' }, -- Usamos el ID del empleado como título principal
+    description: { type: #STANDARD, value: 'SolicitudUUID' }
+}
+annotate view ZC_SOLICITUD with
+{
+
+  @UI: {
+  lineItem:       [ { importance: #HIGH },
+                    { type:       #FOR_ACTION,
+                      dataAction: 'wf_send',
+                      label:      'Solicitar aprobación'
+                    }
+                  ],
+  identification: [ { importance: #HIGH } ]
+   }
+
+  @UI.hidden: true
+  @EndUserText.label: 'Solicitud UUID'
+  @UI.facet: [
+  -- 1. Contenedor de Saldos en la Cabecera
+    {
+      id:              'HeaderSaldos',
+      purpose:         #HEADER,
+      type:            #COLLECTION,
+      label:           'Saldos Disponibles'
+    },
+    -- 2. Puntos de datos individuales (Hijos de HeaderSaldos)
+    {
+      id:              'DPVacaciones',
+        parentId:        'HeaderSaldos',
+      purpose:         #HEADER,
+      type:            #DATAPOINT_REFERENCE,
+      targetQualifier: 'VacDisp',
+      position: 10
+    },
+
+   {
+    label: 'Crear Solicitud',
+    id: 'GeneralInfo',
+    purpose: #STANDARD,
+    position: 10 ,
+    type: #IDENTIFICATION_REFERENCE
+  } ]
+  @UI.dataPoint: { qualifier: 'VacDisp',
+                     title: 'Vacaciones',
+                     visualization: #NUMBER
+       }
+  VacacionesDispo;
+  @UI.identification: [ {
+    position: 10 ,
+    label: 'Solicitud UUID'
+  } ]
+  @UI.lineItem: [ {
+    position: 10 ,
+    label: 'Solicitud UUID'
+  } ]
+  @UI.selectionField: [ {
+    position: 10
+  } ]
+  SolicitudUUID;
+
+  @UI.hidden: true
+  @EndUserText.label: 'Empleado UUID'
+  @UI.identification: [ {
+    position: 20 ,
+    label: 'Empleado UUID'
+  } ]
+  @UI.lineItem: [ {
+    position: 20 ,
+    label: 'Empleado UUID'
+  } ]
+  @UI.selectionField: [ {
+    position: 20
+  } ]
+  EmpleadoUUID;
+
+  @EndUserText.label: 'Id Empleado'
+  @UI.identification: [ {
+    position: 30 ,
+    label: 'Id Empleado'
+  } ]
+  @UI.lineItem: [ {
+    position: 30 ,
+    label: 'Id Empleado'
+  } ]
+  @UI.selectionField: [ {
+    position: 30
+  } ]
+  Idempleado;
+
+  @EndUserText.label: 'Tipo de Solicitud'
+  @UI.identification: [ {
+    position: 40 ,
+    label: 'Tipo de Solicitud'
+  } ]
+  @UI.lineItem: [ {
+    position: 40 ,
+    label: 'Tipo de Solicitud'
+  } ]
+  @UI.selectionField: [ {
+    position: 40
+  } ]
+  Tiposolicitud;
+
+  @EndUserText.label: 'Dias Solicitados'
+  @Consumption.filter.hidden: true
+  @UI.identification: [ {
+    position: 50 ,
+    label: 'Dias Solicitados'
+  } ]
+  @UI.lineItem: [ {
+    position: 50 ,
+    label: 'Dias Solicitados'
+  } ]
+  @UI.selectionField: [ {
+    position: 50
+  } ]
+  Diassolicitados;
+
+  @EndUserText.label: 'Fecha Inicio'
+  @Consumption.filter.hidden: true
+  @UI.identification: [ {
+    position: 60 ,
+    label: 'Fecha Inicio'
+  } ]
+  @UI.lineItem: [ {
+    position: 60 ,
+    label: 'Fecha Inicio'
+  } ]
+  @UI.selectionField: [ {
+    position: 60
+  } ]
+  Fechainicio;
+
+  @EndUserText.label: 'Fecha Fin'
+  @Consumption.filter.hidden: true
+  @UI.identification: [ {
+    position: 70 ,
+    label: 'Fecha Fin'
+  } ]
+  @UI.lineItem: [ {
+    position: 70 ,
+    label: 'Fecha Fin'
+  } ]
+  @UI.selectionField: [ {
+    position: 70
+  } ]
+  Fechafin;
+
+  @EndUserText.label: 'Jornada'
+  @Consumption.filter.hidden: true
+  @UI.identification: [ {
+    position: 80 ,
+    label: 'Jornada'
+  } ]
+  @UI.lineItem: [ {
+    position: 80 ,
+    label: 'Jornada'
+  } ]
+  @UI.selectionField: [ {
+    position: 80
+  } ]
+  Jornada;
+
+  @EndUserText.label: 'Estado'
+  @UI.identification: [ {
+    position: 90 ,
+    label: 'Estado'
+  } ]
+  @UI.lineItem: [ {
+    position: 90 ,
+    label: 'Estado'
+  } ]
+  @UI.selectionField: [ {
+   position: 90
+ } ]
+  Estado;
+
+  @EndUserText.label: 'Fecha Decision'
+  @Consumption.filter.hidden: true
+  @UI.identification: [ {
+    position: 100 ,
+    label: 'Fecha Decision'
+  } ]
+  @UI.lineItem: [ {
+    position: 100 ,
+    label: 'Fecha Decision'
+  } ]
+  @UI.selectionField: [ {
+    position: 100
+  } ]
+  Fechadecision;
+
+  @EndUserText.label: 'Comentario'
+  @Consumption.filter.hidden: true
+  @UI.identification: [ {
+    position: 110 ,
+    label: 'Comentario'
+  } ]
+  @UI.lineItem: [ {
+    position: 110 ,
+    label: 'Comentario'
+  } ]
+  @UI.selectionField: [ {
+    position: 110
+  } ]
+  Comentario;
+  
+  @EndUserText.label: 'Creado por'
+  @UI.identification: [ {
+    position: 120,
+    label: 'Creado por'
+  } ]
+  @UI.lineItem: [ {
+    position: 120,
+    label: 'Creado por'
+  } ]
+  @UI.selectionField: [ {
+    position: 120
+  } ]
+  LocalCreatedBy;
+    
+  @EndUserText.label: 'Creado el'
+  @UI.identification: [ {
+    position: 130,
+    label: 'Creado el'
+  } ]
+  @UI.lineItem: [ {
+    position: 130,
+    label: 'Creado el'
+  } ]
+  @UI.selectionField: [ {
+    position: 130
+  } ]
+  LocalCreatedAt;
+  
+  @UI.hidden: true
+  @UI.identification: [ {
+    position: 140
+  } ]
+  @UI.lineItem: [ {
+    position: 140
+  } ]
+  @UI.selectionField: [ {
+    position: 140
+  } ]
+  LocalLastChangedBy;
+
+  @UI.hidden: true
+  @UI.identification: [ {
+    position: 150
+  } ]
+  @UI.lineItem: [ {
+    position: 150
+  } ]
+  @UI.selectionField: [ {
+    position: 150
+  } ]
+  LocalLastChangedAt;
+  
+  @UI.hidden: true
+  @Consumption.filter.hidden: true
+  @UI.identification: [ {
+    position: 160
+  } ]
+  @UI.lineItem: [ {
+    position: 160
+  } ]
+  @UI.selectionField: [ {
+    position: 160
+  } ]
+  LastChangedAt;
+
+  @EndUserText.label: '_BaseEntity'
+  @UI.identification: [ {
+    position: 170 ,
+    label: '_BaseEntity'
+  } ]
+  @UI.lineItem: [ {
+    position: 170 ,
+    label: '_BaseEntity'
+  } ]
+  @UI.selectionField: [ {
+    position: 170
+  } ]
+  _BaseEntity;
+
+}

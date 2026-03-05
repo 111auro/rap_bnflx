@@ -1,0 +1,6 @@
+@EndUserText.label: 'ZI_CARGO'
+@MappingRole: true
+define role ZI_CARGO {
+  grant select on ZI_CARGO
+  where TRUE;
+}

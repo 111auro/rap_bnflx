@@ -1,0 +1,11 @@
+@EndUserText: {
+  label: 'Service Definition for ZC_TIP_SOL'
+}
+@ObjectModel: {
+  leadingEntity: {
+    name: 'ZC_TIP_SOL'
+  }
+}
+define service ZUI_TIP_SOL_O4 provider contracts odata_v4_ui {
+  expose ZC_TIP_SOL as Tipo_Solicitud;
+}
